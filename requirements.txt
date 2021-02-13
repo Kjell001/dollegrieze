@@ -1,4 +1,4 @@
 tweepy
 pytz
-django-scheduler
+schedule
 Pillow
