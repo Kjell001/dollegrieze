@@ -31,7 +31,7 @@ def ring_bells(dttm):
     times = (dttm.hour - 1) % 12 + 1
     ind_possible = list(range(len(BELLS)))
     # Seed ensures bell sounds are consistent throughout day half
-    seed = 2 * dttm.toordinal() + dttm.hour > 11
+    seed = 2 * dttm.toordinal() + int(dttm.hour > 11)
     random.seed(seed)
     # Don't allow same sounds in a row
     indices = [seed % len(BELLS)]
